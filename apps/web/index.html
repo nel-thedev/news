@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>News Helper</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>News Helper</h1>
+
+      <form id="form" autocomplete="off">
+        <label
+          >Article URL
+          <input
+            type="url"
+            name="url"
+            id="url"
+            placeholder="https://..."
+            required
+          />
+        </label>
+
+        <fieldset>
+          <legend>Mode</legend>
+          <label
+            ><input type="radio" name="mode" value="summary" checked />
+            Summary</label
+          >
+          <label><input type="radio" name="mode" value="bias" /> Bias</label>
+          <label
+            ><input type="radio" name="mode" value="background" />
+            Background</label
+          >
+        </fieldset>
+
+        <fieldset>
+          <legend>Language</legend>
+          <label
+            ><input type="radio" name="lang" value="en" checked /> EN</label
+          >
+          <label><input type="radio" name="lang" value="es" /> ES</label>
+        </fieldset>
+
+        <label
+          >API key
+          <input
+            type="password"
+            name="key"
+            id="key"
+            placeholder="x-api-key"
+            required
+          />
+        </label>
+
+        <button type="submit">Analyze</button>
+      </form>
+
+      <section id="result" class="result"></section>
+    </main>
+
+    <script type="module" src="/main.ts"></script>
+  </body>
+</html>
