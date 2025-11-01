@@ -1,5 +1,6 @@
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
+import 'dotenv/config';
 
 const app = Fastify({ logger: false }); // no logs as requested
 
